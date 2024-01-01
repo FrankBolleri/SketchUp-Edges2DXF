@@ -1,6 +1,10 @@
 # SketchUp Edges2DXF Plugin
 Simple SketchUp plugin to export selected edges as line in DXF format
 
+## Compatibility
+I was able to run it on the only SketchUp version I have: Make 2017.  
+I can not assure it will run on a different version.  
+
 ## Installation
 Look in the releases section on the right and download the most updated **.rbz** file.  
 Then load it on SketchUp using Extension Manager  
