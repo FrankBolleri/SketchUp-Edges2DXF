@@ -82,32 +82,32 @@ module FBPlugins
 
       #x1
       toReturn += ("10" + "\n")
-      toReturn += ("#{edge.start.position.x.to_f}" + "\n")
+      toReturn += ("#{format_len(edge.start.position.x.to_f)}" + "\n")
 
       #y1
       toReturn += ("20" + "\n")
-      toReturn += ("#{edge.start.position.y.to_f}" + "\n")
+      toReturn += ("#{format_len(edge.start.position.y.to_f)}" + "\n")
 
       #z1
       toReturn += ("30" + "\n")
       if includeZ == IDYES
-        toReturn += ("#{edge.start.position.z.to_f}" + "\n")
+        toReturn += ("#{format_len(edge.start.position.z.to_f)}" + "\n")
       else
         toReturn += ("0" + "\n")
       end
 
       #x2
       toReturn += ("11" + "\n")
-      toReturn += ("#{edge.end.position.x.to_f}" + "\n")
+      toReturn += ("#{format_len(edge.end.position.x.to_f)}" + "\n")
 
       #y2
       toReturn += ("21" + "\n")
-      toReturn += ("#{edge.end.position.y.to_f}" + "\n")
+      toReturn += ("#{format_len(edge.end.position.y.to_f)}" + "\n")
 
       #z2
       toReturn += ("31" + "\n")
       if includeZ == IDYES
-        toReturn += ("#{edge.end.position.z.to_f}" + "\n")
+        toReturn += ("#{format_len(edge.end.position.z.to_f)}" + "\n")
       else
         toReturn += ("0" + "\n")
       end
@@ -125,6 +125,19 @@ module FBPlugins
       toReturn += ("EOF" + "\n")
 
       toReturn
+    end
+
+    # v1.0.1
+    # Considering DXF "unitless", we obtain numerical expression of length in current units but without unit symbols
+    # So, output in DXF will follow SketchUp values
+    def self.format_len(in_value)
+      #edge.start.position.x.to_s.to_f not works always
+
+      unitIndex = Sketchup::active_model.options['UnitsOptions']['LengthUnit']
+      #unit = ['in','ft','mm','cm','m'][i]
+      unitFactor = [1,0.0833333,25.4,2.54,0.0254][unitIndex]
+
+      in_value * unitFactor
     end
 
     # Place menu entry

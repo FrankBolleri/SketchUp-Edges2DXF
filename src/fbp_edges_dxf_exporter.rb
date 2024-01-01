@@ -13,7 +13,7 @@ module FBPlugins
     unless file_loaded?(__FILE__)
       ex = SketchupExtension.new('Edges2DXF', 'fbp_edges_dxf_exporter/main')
       ex.description = 'Export selected edges as lines in DXF format'
-      ex.version     = '1.0.0'
+      ex.version     = '1.0.1'
       ex.copyright   = 'Frank Bolleri, 2024'
       ex.creator     = 'Frank Bolleri'
       Sketchup.register_extension(ex, true)
