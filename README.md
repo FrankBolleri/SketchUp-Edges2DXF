@@ -37,7 +37,7 @@ If instead you choose to do not include Z coordinates, any edge will be exported
 ## Known limitations
 I have created this plugin to fit my very basic need to export in DXF from SketchUp, because I was not able to find anything similar looking in the web.  
 I know that the final result is full of overlapped lines (that can be removed in AutoCAD with OVERKILL command if all on the same Z) and just implemented using lines and not circles, arcs, polylines etc.  
-But this result for my is enough: if someone else want to use it as base, fork it and create a more advanced DXF export plugin, feel free to do it.  
+But this result for me is enough: if someone else want to use it as base, fork it and create a more advanced DXF export plugin, feel free to do it.  
 
 **For sure this plugin is provided AS IS and WITHOUT ANY WARRANTY - use at your own risk.**  
 
