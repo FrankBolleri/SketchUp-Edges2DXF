@@ -42,7 +42,7 @@ But this result for me is enough: if someone else want to use it as base, fork i
 **For sure this plugin is provided AS IS and WITHOUT ANY WARRANTY - use at your own risk.**  
 
 ## References
-I want to say thanks to Eneroth3 (https://github.com/Eneroth3) because it was using its plugins that i get inspired to try making one, even though I had never seen Ruby language before.  
+I want to say thanks to Eneroth3 (https://github.com/Eneroth3) because it was using its plugins that I get inspired to try making one, even though I had never seen Ruby language before.  
 Furthermore, as also mentioned in the code, a lot of my work is based on her SVG Exporter plugin (https://github.com/Eneroth3/eneroth-svg-exporter).  
 
 Finally, I want to thank the authors of https://developer.sketchup.com/developers/example-extensions tutorial because it was by reading it that I understood how to start.  
